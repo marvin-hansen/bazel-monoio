@@ -1,0 +1,20 @@
+load("@rules_rust//crate_universe:defs.bzl", "crate", "crates_vendor")
+
+crates_vendor(
+    name = "crates_vendor",
+    annotations = {},
+      mode = "local",
+    packages = {
+            # Regular Rust dependencies
+            "rkyv": crate.spec(
+                package = "rkyv",
+                version = "0.8.10",
+            ),
+            "monoio": crate.spec(
+                package = "monoio",
+                version = "0.2.4",
+            ),
+        },
+        repository_name = "delta_vendored",
+        tags = ["manual"],
+)

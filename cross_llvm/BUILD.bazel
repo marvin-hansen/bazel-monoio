@@ -1,0 +1,31 @@
+load("@rules_rust//rust:defs.bzl", "rust_binary")
+
+rust_binary(
+    name = "hello_world_host",
+    srcs = ["src/main.rs"],
+    visibility = ["//visibility:public"],
+    deps = [
+        # External crates
+        "@crates//:monoio",
+    ],
+)
+
+rust_binary(
+    name = "hello_world_x86_64",
+    srcs = ["src/main.rs"],
+    platform = "//build/platforms:linux-x86_64",
+    deps = [
+       # External crates
+       "@crates//:monoio",
+   ],
+)
+
+rust_binary(
+    name = "hello_world_aarch64",
+    srcs = ["src/main.rs"],
+    platform = "//build/platforms:linux-aarch64",
+     deps = [
+           # External crates
+           "@crates//:monoio",
+       ],
+)

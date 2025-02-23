@@ -1,0 +1,44 @@
+module(
+    name = "hello_world",
+    version = "0.0.0",
+)
+
+# https://github.com/bazelbuild/rules_rust/releases
+bazel_dep(name = "platforms", version = "0.0.11")
+bazel_dep(name = "rules_rust", version = "0.57.1")
+
+# Toolchains
+# bazel_dep(name = "toolchains_llvm", version = "1.2.0", dev_dependency = True)
+bazel_dep(name = "toolchains_musl", version = "0.1.20", dev_dependency = True)
+
+###############################################################################
+# Rust toolchain
+# https://github.com/bazelbuild/rules_rust/releases
+###############################################################################
+RUST_EDITION = "2024"
+
+RUST_VERSION = "1.85.0"
+
+rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
+rust.toolchain(
+    edition = RUST_EDITION,
+    extra_target_triples = [
+        "x86_64-unknown-linux-musl",
+        "aarch64-unknown-linux-musl",
+    ],
+    versions = [RUST_VERSION],
+)
+use_repo(rust, "rust_toolchains")
+
+register_toolchains("@rust_toolchains//:all")
+
+###############################################################################
+# Rust dependencies
+###############################################################################
+crate = use_extension("@rules_rust//crate_universe:extensions.bzl", "crate")
+crate.spec(
+    package = "monoio",
+    version = "0.2.4",
+)
+crate.from_specs()
+use_repo(crate, "crates")
