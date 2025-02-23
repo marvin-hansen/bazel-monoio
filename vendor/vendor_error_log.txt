@@ -1,0 +1,14 @@
+ bazel run //thirdparty:crates_vendor
+INFO: Analyzed target //thirdparty:crates_vendor (1 packages loaded, 1 target configured).
+INFO: Found 1 target...
+Target //thirdparty:crates_vendor up-to-date:
+  target-bzl/bin/thirdparty/crates_vendor.sh
+INFO: Elapsed time: 0.231s, Critical Path: 0.00s
+INFO: 1 process: 7 action cache hit, 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: target-bzl/bin/thirdparty/crates_vendor.sh
+Error: Failed to get crate from cache for Package { name: Name("auto-const-array"), version: Version { major: 0, minor: 2, patch: 1 }, source: Some(SourceId { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("github.com")), port: None, path: "/rust-lang/crates.io-index", query: None, fragment: None }, kind: Registry, precise: Some("locked"), name: None }), checksum: Some(Sha256(62f7df18977a1ee03650ee4b31b4aefed6d56bac188760b6e37610400fe8d4bb)), dependencies: [Dependency { name: Name("proc-macro2"), version: Version { major: 1, minor: 0, patch: 93 }, source: Some(SourceId { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("github.com")), port: None, path: "/rust-lang/crates.io-index", query: None, fragment: None }, kind: Registry, precise: Some("locked"), name: None }) }, Dependency { name: Name("quote"), version: Version { major: 1, minor: 0, patch: 38 }, source: Some(SourceId { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("github.com")), port: None, path: "/rust-lang/crates.io-index", query: None, fragment: None }, kind: Registry, precise: Some("locked"), name: None }) }, Dependency { name: Name("syn"), version: Version { major: 2, minor: 0, patch: 98 }, source: Some(SourceId { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("github.com")), port: None, path: "/rust-lang/crates.io-index", query: None, fragment: None }, kind: Registry, precise: Some("locked"), name: None }) }], replace: None }
+
+Caused by:
+    No such file or directory (os error 2)
+Marvins-MacBook-Pro-2:vendor marvin$

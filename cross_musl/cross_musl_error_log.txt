@@ -1,0 +1,189 @@
+bazel build //...
+INFO: Analyzed 3 targets (0 packages loaded, 0 targets configured).
+INFO: Found 3 targets...
+ERROR: /private/var/tmp/_bazel_marvin/4517ecb253ccf4e2e91813ff40d1904b/external/rules_rust++crate+crates__monoio-0.2.4/BUILD.bazel:16:13: Compiling Rust rlib monoio v0.2.4 (163 files) failed: (Exit 1): process_wrapper failed: error executing Rustc command (from target @@rules_rust++crate+crates__monoio-0.2.4//:monoio)
+  (cd /private/var/tmp/_bazel_marvin/4517ecb253ccf4e2e91813ff40d1904b/sandbox/darwin-sandbox/80/execroot/_main && \
+  exec env - \
+    CARGO_CFG_TARGET_ARCH=aarch64 \
+    CARGO_CFG_TARGET_OS=linux \
+    CARGO_CRATE_NAME=monoio \
+    CARGO_MANIFEST_DIR='${pwd}/external/rules_rust++crate+crates__monoio-0.2.4' \
+    CARGO_PKG_AUTHORS='' \
+    CARGO_PKG_DESCRIPTION='' \
+    CARGO_PKG_HOMEPAGE='' \
+    CARGO_PKG_NAME=monoio \
+    CARGO_PKG_VERSION=0.2.4 \
+    CARGO_PKG_VERSION_MAJOR=0 \
+    CARGO_PKG_VERSION_MINOR=2 \
+    CARGO_PKG_VERSION_PATCH=4 \
+    CARGO_PKG_VERSION_PRE='' \
+    REPOSITORY_NAME=rules_rust++crate+crates__monoio-0.2.4 \
+  bazel-out/darwin_arm64-opt-exec/bin/external/rules_rust+/util/process_wrapper/process_wrapper --arg-file bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__libc-0.2.170/_bs.linksearchpaths --arg-file bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__io-uring-0.6.4/_bs.linksearchpaths --arg-file bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__memoffset-0.7.1/_bs.linksearchpaths --subst 'pwd=${pwd}' -- bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++rust+rust_darwin_aarch64__aarch64-unknown-linux-musl__stable_tools/rust_toolchain/bin/rustc external/rules_rust++crate+crates__monoio-0.2.4/src/lib.rs '--crate-name=monoio' '--crate-type=rlib' '--error-format=human' '--codegen=metadata=-1003016280' '--codegen=extra-filename=-1003016280' '--out-dir=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__monoio-0.2.4' '--codegen=opt-level=0' '--codegen=debuginfo=0' '--codegen=strip=none' '--remap-path-prefix=${pwd}=' '--emit=dep-info,link' '--color=always' '--target=aarch64-unknown-linux-musl' --cfg 'feature="async-cancel"' --cfg 'feature="bytes"' --cfg 'feature="default"' --cfg 'feature="io-uring"' --cfg 'feature="iouring"' --cfg 'feature="legacy"' --cfg 'feature="macros"' --cfg 'feature="mio"' --cfg 'feature="monoio-macros"' --cfg 'feature="nix"' --cfg 'feature="utils"' -L bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++rust+rust_darwin_aarch64__aarch64-unknown-linux-musl__stable_tools/rust_toolchain/lib/rustlib/aarch64-unknown-linux-musl/lib -L bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++rust+rust_darwin_aarch64__aarch64-unknown-linux-musl__stable_tools/rust_toolchain/lib/rustlib/aarch64-unknown-linux-musl/lib/self-contained '--edition=2021' '-Cembed-bitcode=no' '--extern=bytes=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__bytes-1.10.0/libbytes-488712410.rlib' '--extern=fxhash=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__fxhash-0.2.1/libfxhash-1620268596.rlib' '--extern=libc=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__libc-0.2.170/liblibc-2265311993.rlib' '--extern=memchr=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__memchr-2.7.4/libmemchr-1223570453.rlib' '--extern=mio=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__mio-0.8.11/libmio-1445747506.rlib' '--extern=pin_project_lite=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__pin-project-lite-0.2.16/libpin_project_lite-2218591079.rlib' '--extern=socket2=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__socket2-0.5.8/libsocket2-2360103514.rlib' '--extern=io_uring=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__io-uring-0.6.4/libio_uring-939324153.rlib' '--extern=nix=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__nix-0.26.4/libnix-1013796312.rlib' '--extern=auto_const_array=bazel-out/darwin_arm64-opt-exec/bin/external/rules_rust++crate+crates__auto-const-array-0.2.1/libauto_const_array-2665755838.dylib' '--extern=monoio_macros=bazel-out/darwin_arm64-opt-exec/bin/external/rules_rust++crate+crates__monoio-macros-0.1.0/libmonoio_macros-604878556.dylib' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__bytes-1.10.0' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__byteorder-1.5.0' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__fxhash-0.2.1' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__libc-0.2.170' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__memchr-2.7.4' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__log-0.4.26' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__mio-0.8.11' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__pin-project-lite-0.2.16' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__socket2-0.5.8' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__bitflags-1.3.2' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__io-uring-0.6.4' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__cfg-if-1.0.0' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__memoffset-0.7.1' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__pin-utils-0.1.0' '-Ldependency=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++crate+crates__nix-0.26.4' '-Ldependency=bazel-out/darwin_arm64-opt-exec/bin/external/rules_rust++crate+crates__auto-const-array-0.2.1' '-Ldependency=bazel-out/darwin_arm64-opt-exec/bin/external/rules_rust++crate+crates__monoio-macros-0.1.0' '--sysroot=bazel-out/linux-aarch64-fastbuild/bin/external/rules_rust++rust+rust_darwin_aarch64__aarch64-unknown-linux-musl__stable_tools/rust_toolchain' '--cap-lints=allow')
+# Configuration: eae4c95721f9a341cb2021ca000ca600144a61d53c4d736aa93e43470e3cd229
+# Execution platform: @@platforms//host:host
+
+Use --sandbox_debug to see verbose messages from the sandbox and retain the sandbox build root for debugging
+error[E0432]: unresolved import `libc::statx`
+ --> external/rules_rust++crate+crates__monoio-0.2.4/src/driver/op/statx.rs:6:5
+  |
+6 | use libc::statx;
+  |     ^^^^^^^^^^^ no `statx` in the root
+  |
+help: a similar name exists in the module
+  |
+6 | use libc::stat;
+  |           ~~~~
+help: consider importing one of these items instead
+  |
+6 | use crate::driver::op::statx;
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~
+6 | use crate::driver::op::statx::types::statx;
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6 | use io_uring::types::statx;
+  |     ~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0425]: cannot find value `AT_STATX_SYNC_AS_STAT` in crate `libc`
+  --> external/rules_rust++crate+crates__monoio-0.2.4/src/driver/op/statx.rs:73:48
+   |
+73 |             .flags(libc::AT_EMPTY_PATH | libc::AT_STATX_SYNC_AS_STAT)
+   |                                                ^^^^^^^^^^^^^^^^^^^^^ not found in `libc`
+
+error[E0425]: cannot find value `STATX_ALL` in crate `libc`
+  --> external/rules_rust++crate+crates__monoio-0.2.4/src/driver/op/statx.rs:74:25
+   |
+74 |             .mask(libc::STATX_ALL)
+   |                         ^^^^^^^^^ help: a constant with a similar name exists: `STA_FLL`
+  --> external/rules_rust++crate+crates__libc-0.2.170/src/unix/linux_like/linux/musl/mod.rs:930:1
+   |
+   = note: similarly named constant `STA_FLL` defined here
+
+error[E0425]: cannot find function `statx` in crate `libc`
+  --> external/rules_rust++crate+crates__monoio-0.2.4/src/driver/op/statx.rs:91:22
+   |
+91 |         syscall_u32!(statx(
+   |                      ^^^^^ help: a function with a similar name exists: `stat`
+  --> external/rules_rust++crate+crates__libc-0.2.170/src/unix/mod.rs:828:5
+   |
+   = note: similarly named function `stat` defined here
+
+error[E0425]: cannot find value `STATX_ALL` in crate `libc`
+  --> external/rules_rust++crate+crates__monoio-0.2.4/src/driver/op/statx.rs:95:19
+   |
+95 |             libc::STATX_ALL,
+   |                   ^^^^^^^^^ help: a constant with a similar name exists: `STA_FLL`
+  --> external/rules_rust++crate+crates__libc-0.2.170/src/unix/linux_like/linux/musl/mod.rs:930:1
+   |
+   = note: similarly named constant `STA_FLL` defined here
+
+error[E0425]: cannot find value `STATX_ALL` in crate `libc`
+   --> external/rules_rust++crate+crates__monoio-0.2.4/src/driver/op/statx.rs:169:25
+    |
+169 |             .mask(libc::STATX_ALL)
+    |                         ^^^^^^^^^ help: a constant with a similar name exists: `STA_FLL`
+   --> external/rules_rust++crate+crates__libc-0.2.170/src/unix/linux_like/linux/musl/mod.rs:930:1
+    |
+    = note: similarly named constant `STA_FLL` defined here
+
+error[E0425]: cannot find function `statx` in crate `libc`
+   --> external/rules_rust++crate+crates__monoio-0.2.4/src/driver/op/statx.rs:182:22
+    |
+182 |         syscall_u32!(statx(
+    |                      ^^^^^ help: a function with a similar name exists: `stat`
+   --> external/rules_rust++crate+crates__libc-0.2.170/src/unix/mod.rs:828:5
+    |
+    = note: similarly named function `stat` defined here
+
+error[E0425]: cannot find value `STATX_ALL` in crate `libc`
+   --> external/rules_rust++crate+crates__monoio-0.2.4/src/driver/op/statx.rs:186:19
+    |
+186 |             libc::STATX_ALL,
+    |                   ^^^^^^^^^ help: a constant with a similar name exists: `STA_FLL`
+   --> external/rules_rust++crate+crates__libc-0.2.170/src/unix/linux_like/linux/musl/mod.rs:930:1
+    |
+    = note: similarly named constant `STA_FLL` defined here
+
+error[E0425]: cannot find value `AT_STATX_SYNC_AS_STAT` in crate `libc`
+   --> external/rules_rust++crate+crates__monoio-0.2.4/src/fs/file.rs:521:27
+    |
+521 |         let flags = libc::AT_STATX_SYNC_AS_STAT | libc::AT_EMPTY_PATH;
+    |                           ^^^^^^^^^^^^^^^^^^^^^ not found in `libc`
+
+error[E0412]: cannot find type `statx_timestamp` in crate `libc`
+  --> external/rules_rust++crate+crates__monoio-0.2.4/src/fs/metadata/unix.rs:37:33
+   |
+37 |     pub(crate) stx_btime: libc::statx_timestamp,
+   |                                 ^^^^^^^^^^^^^^^ not found in `libc`
+
+error[E0412]: cannot find type `statx` in crate `libc`
+  --> external/rules_rust++crate+crates__monoio-0.2.4/src/fs/metadata/unix.rs:43:17
+   |
+43 |   impl From<libc::statx> for FileAttr {
+   |                   ^^^^^
+  --> external/rules_rust++crate+crates__libc-0.2.170/src/unix/linux_like/linux/musl/b64/aarch64/mod.rs:10:1
+  ::: external/rules_rust++crate+crates__libc-0.2.170/src/unix/linux_like/linux/musl/b64/aarch64/mod.rs:112:1
+   |
+   = note: similarly named struct `stat` defined here
+   |
+help: a struct with a similar name exists
+   |
+43 | impl From<libc::stat> for FileAttr {
+   |                 ~~~~
+help: consider importing this struct
+   |
+1  + use io_uring::types::statx;
+   |
+help: if you import `statx`, refer to it directly
+   |
+43 - impl From<libc::statx> for FileAttr {
+43 + impl From<statx> for FileAttr {
+   |
+
+error[E0412]: cannot find type `statx` in crate `libc`
+  --> external/rules_rust++crate+crates__monoio-0.2.4/src/fs/metadata/unix.rs:44:24
+   |
+44 |       fn from(buf: libc::statx) -> Self {
+   |                          ^^^^^
+  --> external/rules_rust++crate+crates__libc-0.2.170/src/unix/linux_like/linux/musl/b64/aarch64/mod.rs:10:1
+  ::: external/rules_rust++crate+crates__libc-0.2.170/src/unix/linux_like/linux/musl/b64/aarch64/mod.rs:112:1
+   |
+   = note: similarly named struct `stat` defined here
+   |
+help: a struct with a similar name exists
+   |
+44 |     fn from(buf: libc::stat) -> Self {
+   |                        ~~~~
+help: consider importing this struct
+   |
+1  + use io_uring::types::statx;
+   |
+help: if you import `statx`, refer to it directly
+   |
+44 -     fn from(buf: libc::statx) -> Self {
+44 +     fn from(buf: statx) -> Self {
+   |
+
+error[E0425]: cannot find value `AT_STATX_SYNC_AS_STAT` in crate `libc`
+  --> external/rules_rust++crate+crates__monoio-0.2.4/src/fs/metadata/mod.rs:43:23
+   |
+43 |     let flags = libc::AT_STATX_SYNC_AS_STAT;
+   |                       ^^^^^^^^^^^^^^^^^^^^^ not found in `libc`
+
+error[E0425]: cannot find value `AT_STATX_SYNC_AS_STAT` in crate `libc`
+  --> external/rules_rust++crate+crates__monoio-0.2.4/src/fs/metadata/mod.rs:83:23
+   |
+83 |     let flags = libc::AT_STATX_SYNC_AS_STAT | libc::AT_SYMLINK_NOFOLLOW;
+   |                       ^^^^^^^^^^^^^^^^^^^^^ not found in `libc`
+
+error[E0425]: cannot find value `STATX_BTIME` in crate `libc`
+   --> external/rules_rust++crate+crates__monoio-0.2.4/src/fs/metadata/mod.rs:245:46
+    |
+245 |             return if extra.stx_mask & libc::STATX_BTIME != 0 {
+    |                                              ^^^^^^^^^^^ not found in `libc`
+
+error: aborting due to 15 previous errors
+
+Some errors have detailed explanations: E0412, E0425, E0432.
+For more information about an error, try `rustc --explain E0412`.
+INFO: Elapsed time: 0.770s, Critical Path: 0.67s
+INFO: 3 processes: 3 internal.
+ERROR: Build did NOT complete successfully
